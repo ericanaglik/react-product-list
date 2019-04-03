@@ -22,12 +22,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Show products here</h1>
-        <ul>
+        <div>
           {cats}
-        </ul>
-        <ul>
+        </div>
+        <div className="inventory">
           {items}
-        </ul>
+        </div>
       </div>
     );
   }

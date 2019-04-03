@@ -1,8 +1,11 @@
 .App {
- width: 960px;
- margin: auto;
+    width: 960px;
+    margin: auto;
+}
+
+.inventory {
  display: grid;
- grid-template-columns: 1fr 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
