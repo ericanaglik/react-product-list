@@ -1,0 +1,9 @@
+.category-button {
+    padding: 1em;
+    margin: 0.125em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rosybrown;
+}
+/* 
+export default .category-button */
