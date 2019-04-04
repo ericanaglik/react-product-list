@@ -5,10 +5,24 @@ import Product from './Product';
 import CategoryButton from './Category-Button'
 
 class App extends Component {
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentCategory: null
+    }
+  }
+  setCategory(cat) {
+    console.log(cat)
+    this.setState({ currentCategory: cat })
+  }
   render() {
     const cats = categories.map((cat) => {  // map( () => {} )
-      return <CategoryButton key={cat} label={cat} />
+      return (
+        <CategoryButton
+          key={cat}
+          label={cat}
+          onClick={ (cat) => this.setCategory(cat) }
+        />)
     })
     const items = inventory.map((item, i) => {
       const { name, description, price } = item
