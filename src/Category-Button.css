@@ -5,5 +5,9 @@
     border-radius: 0.5em;
     background-color: rosybrown;
 }
+
+.selected {
+    background-color: lightpink
+}
 /* 
 export default .category-button */
