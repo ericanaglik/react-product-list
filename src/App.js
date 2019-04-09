@@ -7,8 +7,9 @@ import CategoryButton from './Category-Button'
 class App extends Component {
   constructor(props) {
     super(props)
+    categories.push("All")
     this.state = {
-      currentCategory: null
+      currentCategory: 'All'
     }
   }
   setCategory(cat) {
@@ -25,20 +26,8 @@ class App extends Component {
           onClick={ (cat) => this.setCategory(cat) }
         />)
     })
-    // const items = inventory.map((item, i) => {
-    //   const { name, description, price } = item
-    //   return (
-    //     <Product
-    //       key={`${name}-i`}
-    //       title={name}
-    //       desc={description}
-    //       price={price}
-    //     />)
-    // })
-
-
     const products = inventory.filter((item) => {
-      return item.category === this.state.currentCategory || this.state.currentCategory === null
+      return item.category === this.state.currentCategory || this.state.currentCategory === 'All'
     }).map((item, i) => {
       const { name, description, price } = item
       return (
@@ -49,8 +38,6 @@ class App extends Component {
           price={price}
       />)
     })
-
-
     return (
       <div className="App">
         <h1>Show products here</h1>
