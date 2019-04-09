@@ -5,6 +5,10 @@
 
 .inventory {
  display: grid;
+ border-radius: 25px;
+ border: 2px solid rosybrown;
+ padding: 20px;
+ box-shadow: 0px 0px 25px lightpink;
  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
